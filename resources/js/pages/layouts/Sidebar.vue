@@ -31,14 +31,14 @@
 
                     <!-- Dashboard -->
                     <li class="nav-item">
-                        <a href="/" class="nav-link menu-link">
+                        <router-link :to="{ name: 'Dashboard' }" class="nav-link menu-link">
                             <i class="bi bi-house-door"></i> <span data-key="t-dashboard">Dashboard</span>
-                        </a>
+                        </router-link>
                     </li>
 
                     <!-- Gestion des projets -->
                     <li class="nav-item">
-                        <router-link :to="{name: ProjectList}" class="nav-link menu-link">
+                        <router-link :to="{ name: 'ProjectList' }" class="nav-link menu-link">
                             <i class="bi bi-clipboard-check"></i> <span data-key="t-projets">Projets</span>
                         </router-link>
                         <!-- <a class="nav-link menu-link" href="#sidebarProjets" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProjets">
@@ -84,21 +84,11 @@
 
                     <!-- Gestion des utilisateurs -->
                     <li class="nav-item">
-                        <a class="nav-link menu-link" href="#sidebarUtilisateurs" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarUtilisateurs">
+                        <router-link :to="{ name: 'UserList' }" class="nav-link menu-link">
                             <i class="bi bi-person-bounding-box"></i> <span data-key="t-utilisateurs">Utilisateurs</span>
-                        </a>
-                        <div class="collapse menu-dropdown" id="sidebarUtilisateurs">
-                            <ul class="nav nav-sm flex-column">
-                                <li class="nav-item">
-                                    <router-link :to="{ name: 'UserList' }" class="nav-link" data-key="t-liste-utilisateurs">Liste des utilisateurs</router-link>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/utilisateurs/ajouter" class="nav-link" data-key="t-ajouter-utilisateur">Ajouter un utilisateur</a>
-                                </li>
-                            </ul>
-                        </div>
+                        </router-link>
                     </li>
-
+                    
                     <!-- Paramètres -->
                     <li class="nav-item">
                         <router-link :to="{ name: 'Settings' }" class="nav-link menu-link">

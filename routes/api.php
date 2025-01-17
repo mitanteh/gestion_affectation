@@ -10,15 +10,18 @@ use App\Http\Controllers\TacheController;
 use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\CompetenceController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\DashboardController;
 
 // Authentication Routes
 Route::post('/login', [UserController::class, "authenticate"]);
 Route::post('/reset', [UserController::class, "resetpwd"]);
 Route::post('/user/active/account/expire', [UserController::class, "activeusr"]);
+Route::get('/dashboard-data', [DashboardController::class, 'getDashboardData']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
     
     Route::post('/logout', [UserController::class, "logout"]);
+
 
     // User Routes
     Route::prefix('users')->group(function () {

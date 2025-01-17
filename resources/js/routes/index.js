@@ -39,7 +39,7 @@ const routes = [
         path: 'projets/list', 
         name: 'ProjectList', 
         component: ProjectList, 
-        meta: { requiresAuth: true, role: 'admin' } 
+        meta: { requiresAuth: true } 
       },
       { 
         path: 'projets/detail/:id', 
